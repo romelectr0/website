@@ -1,5 +1,35 @@
 
 <?php 
+function w($conevol) {
+if (isset($_POST['value1'])) {
+if (isset($_POST['value3'])) {
+if (isset($_POST['value5'])) {
+$conelenght = $_POST['value5'];
+$chamberdiameter = $_POST['value3'];
+$cannondiameter = $_POST['value1'];
+$pi = 3.14159265359;
+if (($conelenght and $chamberdiameter and $cannondiameter) != 0) {
+$conelenght = (Int)$conelenght;
+$chamberdiameter = (Int)$chamberdiameter;
+$cannondiameter = (Int)$cannondiameter;
+$ca = ($conelenght*($pi/3));
+$cb = $chamberdiameter/2;
+$cc = $cb*$cb;
+$cd = $cannondiameter/2;
+$ce = $cd*$cd;
+$cf = $cb*$cd;
+$cg = ($ce+$cf+$cc);
+$ch = $cg*$ca;
+$ch = $cm;
+return($cm);
+}
+else {
+return 1;
+}
+}
+}
+}
+}
 function x($value){
 $number;
 if (isset($_POST['value1']))
@@ -55,7 +85,7 @@ $pi = 3.14159265359;
 	$n = ($l/2);
     $o = ($n*$n);
     $p = ($o*$pi);
-    $q = ($p*$m);
+    $q = ($p*($m+g(0)));
     $r = ($q*1.7);
     $s = ($k/2);
     $t = ($s*$s);
@@ -68,10 +98,13 @@ $pi = 3.14159265359;
 	$z = $chamberdiameter;
 	$aa = $chamberlenght;
 	$ab = $cannondiameter;
+	$z = (Int)$z;
+	$aa = (Int)$aa;
+	$ab = (Int)$ab;
 	$ac = ($z/2);
     $ad = ($ac*$ac);
     $ae = ($ad*$pi);
-    $af = ($ad*$aa);
+    $af = ($ae*($aa+g(0)));
     $ag = ($ab/2);
     $ah = ($ag*$ag);
     $ai = ($ah*$pi);
@@ -90,7 +123,7 @@ $pi = 3.14159265359;
 	$ar = ($ao/2);
     $at = ($ar*$ar);
     $au = ($at*$pi);
-    $av = ($au*$ap);
+    $av = ($au*($ap+g(0)));
     $aw = ($av/1.7);
     $ax = ($aw/$aq);
     $ay = ($ax/$pi);
@@ -109,7 +142,7 @@ $pi = 3.14159265359;
 	$bh = ($bg/2);
     $bi = ($bh*$bh);
     $bj = ($bi*$pi);
-    $bk = ($bj*$bf);
+    $bk = ($bj*($bf+g(0)));
     $bl = ($bk*1.7);
     $bm = ($bl/$be);
     $bn = ($bm/$pi);
@@ -157,7 +190,7 @@ return(4);
 	
 	?>
 	<?php if (isset($_GET['pages'])) {
-	echo("
+	echo("<html><head><title></title></head><body>
 	<a href=");
 	echo('"');
 	echo("page1.php?pages=");
@@ -197,7 +230,7 @@ return(4);
 	echo('"');
 	}
 	}
-	echo(">lololo</a>");
+	echo(">lololo</a></body></html>");
 	}
 	elseif (isset($_GET['videopage'])) {
 	echo("<a href=");
@@ -279,5 +312,4 @@ return(4);
 	}
 	}
 	echo(">lololo</a>");
-	}
-	?>
+	}?>
