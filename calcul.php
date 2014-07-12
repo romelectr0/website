@@ -12,19 +12,17 @@ if (($conelenght and $chamberdiameter and $cannondiameter) != 0) {
 $conelenght = (Int)$conelenght;
 $chamberdiameter = (Int)$chamberdiameter;
 $cannondiameter = (Int)$cannondiameter;
-$ca = ($conelenght*($pi/3));
+$ca = ($conelenght/3);
 $cb = $chamberdiameter/2;
-$cc = $cb*$cb;
+$cc = ($cb*$cb)*$pi;
 $cd = $cannondiameter/2;
-$ce = $cd*$cd;
-$cf = $cb*$cd;
-$cg = ($ce+$cf+$cc);
-$ch = $cg*$ca;
-$ch = $cm;
-return($cm);
+$ce = ($cd*$cd)*$pi;
+$cf = ($ce+sqrt($ce*$cc)+$cc);
+$cg = $ca*$cf;
+return($cg);
 }
 else {
-return 1;
+return 0;
 }
 }
 }
@@ -85,7 +83,7 @@ $pi = 3.14159265359;
 	$n = ($l/2);
     $o = ($n*$n);
     $p = ($o*$pi);
-    $q = ($p*($m+g(0)));
+    $q = ($p*$m);
     $r = ($q*1.7);
     $s = ($k/2);
     $t = ($s*$s);
@@ -104,11 +102,11 @@ $pi = 3.14159265359;
 	$ac = ($z/2);
     $ad = ($ac*$ac);
     $ae = ($ad*$pi);
-    $af = ($ae*($aa+g(0)));
+    $af = ($ae*$aa);
     $ag = ($ab/2);
     $ah = ($ag*$ag);
     $ai = ($ah*$pi);
-    $aj = ($af*1.7);
+    $aj = ((w(0)+$af)/1.7);
     $ak = ($aj/$ai);
 	return($ak);
 	}
@@ -123,8 +121,8 @@ $pi = 3.14159265359;
 	$ar = ($ao/2);
     $at = ($ar*$ar);
     $au = ($at*$pi);
-    $av = ($au*($ap+g(0)));
-    $aw = ($av/1.7);
+    $av = ($au*$ap);
+    $aw = (($av+w(0))/1.7);
     $ax = ($aw/$aq);
     $ay = ($ax/$pi);
     $az = sqrt($ay);
@@ -142,7 +140,7 @@ $pi = 3.14159265359;
 	$bh = ($bg/2);
     $bi = ($bh*$bh);
     $bj = ($bi*$pi);
-    $bk = ($bj*($bf+g(0)));
+    $bk = ($bj*$bf);
     $bl = ($bk*1.7);
     $bm = ($bl/$be);
     $bn = ($bm/$pi);
