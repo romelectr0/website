@@ -159,7 +159,12 @@ h2
 #value4
 {
 	margin-left: 10px;
-	margin-bottom: 50px;
+}
+#value5
+{
+margin-left: 10px;
+margin-bottom: 50px;
+
 }
 #thevalue
 {
@@ -181,7 +186,7 @@ h2
 	margin-top: 100px;
 	width: 100px;
 	position: absolute;
-	top: 360px;
+	top: 430px;
 	right: 60px;
 }
 #button:hover
