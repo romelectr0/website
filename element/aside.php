@@ -29,6 +29,7 @@
 						<?php if(isset($_GET['value'])){if(isset($_GET['type'])){$type = $_GET['type'];
 						if($type == 1){echo('value=');echo('"');echo($_GET['value']);echo('"');echo("style=");echo('"');echo("color:#FF0000");echo('"');}
 						else{if (isset($_GET['chamberlenght'])){echo('"');echo($_GET['chamberlenght']);echo('"');}}}}?>/>
+						<p class="thevalue">spudgun cone lenght:</p><input id="value5" type="input" name="value5"/>
 						<input type="Submit" id="button" value="results" onclick="f()"/>
 					</tr>
 				</form>
