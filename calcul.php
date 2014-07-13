@@ -42,36 +42,6 @@ $cannonlenght = $_POST['value2'];
 $chamberlenght = $_POST['value4'];
 $chamberdiameter = $_POST['value3'];
 $cannondiameter = $_POST['value1'];
-/*if (0 == 1) {
-	$a = prompt("quel est la longeur de la chambre a combustion de votre patator ?");
-	$b = prompt("quel est la longeur du cannon de votre patator ?");
-	$c = prompt("quel est le diametre de la chambre a combustion de votre patator ?");
-	$d = prompt("quel est le diametre du canon de votre patator  ?");
-	$bv = Int(a);
-	$bw = Int(b);
-	$bx = Int(c);
-	$by = Int(d);
-	$bz = (bx/2);
-    $ca = (bz*bz);
-    $cb = (ca*pi);
-    $cc = (cb*bv);
-    $cd = (by/2);
-    $ce = (cd*cd);
-    $cf = (ce*pi);
-    $cg = (cf*bw);
-    $g = (cc/cg);
-	$h ;
-		if ( g <1.8 && g > 1.6) {
-		h = ("le ratio de votre patator est bon");
-		}
-	else if (g > 1.8) {
-		h = ( "le ratio de votre patator est trop eleve augmenter le volume du canon ou abaisser le volume de la chambre a combustion");
-		}
-	else if (g < 1.6) {
-		h = ("le ratio de votre patator est trop faible augmenter le volume de la chambre ou abaisse le volume du canon");
-		}
-		alert(h + "le ratio de votre patator est " + g );
-	}*/
 if ($chamberlenght == 0) {
 $pi = 3.14159265359;
 	$w = $chamberdiameter;
@@ -84,7 +54,7 @@ $pi = 3.14159265359;
     $o = ($n*$n);
     $p = ($o*$pi);
     $q = ($p*$m);
-    $r = ($q*1.7);
+    $r = (($q*1.7)-w(0));
     $s = ($k/2);
     $t = ($s*$s);
     $u = ($t*$pi);
@@ -141,7 +111,7 @@ $pi = 3.14159265359;
     $bi = ($bh*$bh);
     $bj = ($bi*$pi);
     $bk = ($bj*$bf);
-    $bl = ($bk*1.7);
+    $bl = (($bk*1.7)-w(0));
     $bm = ($bl/$be);
     $bn = ($bm/$pi);
     $bo = sqrt($bn);
